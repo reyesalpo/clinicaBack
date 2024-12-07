@@ -6,3 +6,7 @@
 DoctorAppBackEnd/ClinicaAPI/obj
 DoctorAppBackEnd/.vs/DoctorAppBackEnd/FileContentIndex
 DoctorAppBackEnd/.vs/DoctorAppBackEnd/v17
+DoctorAppBackEnd/Data/obj/Debug
+DoctorAppBackEnd/Models/obj/Debug
+DoctorAppBackEnd/Models/obj/project.nuget.cache
+*.cache
