@@ -10,3 +10,7 @@ DoctorAppBackEnd/Data/obj/Debug
 DoctorAppBackEnd/Models/obj/Debug
 DoctorAppBackEnd/Models/obj/project.nuget.cache
 *.cache
+DoctorAppBackEnd/Data/bin/Debug
+DoctorAppBackEnd/Data/obj
+DoctorAppBackEnd/Models/bin/Debug
+DoctorAppBackEnd/Models/obj
