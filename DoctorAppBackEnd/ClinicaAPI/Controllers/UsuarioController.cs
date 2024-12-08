@@ -14,6 +14,7 @@ namespace ClinicaAPI.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
+
         // Hacemos referencia a la clase DbContext y se agrega el constructor
         private readonly ApplicationDbContext _context;
 
@@ -25,7 +26,7 @@ namespace ClinicaAPI.Controllers
         // Lista de usuarios
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios() 
-        { 
+        {
             var usuario = await _context.Usuarios.ToListAsync();
             return Ok(usuario);
         }
@@ -33,7 +34,6 @@ namespace ClinicaAPI.Controllers
         // Mostrar por usuario
         [HttpGet("{id}")]
         public async Task<ActionResult<Usuario>> GetUsuario(int id) {
-
             var usuario = await _context.Usuarios.FindAsync(id);
             return Ok(usuario);
         }
