@@ -18,6 +18,10 @@ builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConection");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
+
+// Configuracion de cors
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,6 +30,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// agregamos los origenes de cors que va aceptar y que acepte todos
+app.UseCors(x => x.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod());
+
 
 app.UseHttpsRedirection();
 
